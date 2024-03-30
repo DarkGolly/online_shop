@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аксессуары</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        /* Пользовательские стили */
+        /* Центрирование текста заголовка */
+        .btn-right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #007bff;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Магазин аксессуаров</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О нас</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+    
+    <div class="container">
+        <main id="content">
+            <section id="checkout">
+                <h2>Оформление заказа</h2>
+                <b>Ваши покупки:</b>
+                <div id="checkout-items">
+                    <!-- Items from the cart will be listed here -->
+                </div>
+                
+                <p>Пожалуйста, заполните форму ниже, чтобы оформить заказ.</p>
+                <form id="checkout-form">
+                    <input type="text" id="fullname" name="fullname" placeholder="ФИО" required>
+                    <input type="text" id="phone" name="phone" placeholder="Номер телефона" required>
+                    <input type="text" id="address" name="address" placeholder="Адрес доставки" required>
+                    <select id="payment-method" name="payment-method">
+                        <option value="card">Оплата картой</option>
+                        <option value="cash">Оплата наличными</option>
+                    </select>
+                    <button type="submit" onclick="handleCheckout(event)">Оформить</button>
+                </form>
+
+            </section>
+            <button onclick="window.location.href='index.html'" class="back-to-shop">&#8592; Назад в магазин</button>
+        </main>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

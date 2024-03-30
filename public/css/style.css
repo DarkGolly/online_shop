@@ -1,0 +1,294 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin: 5px 0px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+footer p {
+    padding: 0; /* Set padding to zero */
+    margin: 0; /* Set margin to zero */
+}
+
+.container-main {
+    margin: 0;
+    display: flex;
+    min-height: 100vh; /* Adjust height */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 200px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Main Category Styles */
+.sidebar ul li {
+    padding: 5px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #007bff;
+    display: block;
+    padding: 8px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Subcategory Styles */
+.sidebar ul .subcategories {
+    padding-left: 20px; /* Indent subcategories */
+    margin-top: 5px;
+    display: none; /* Initially hide subcategories */
+}
+
+.sidebar ul .subcategories li {
+    padding: 3px 0;
+}
+
+.sidebar ul .subcategories li a {
+    font-size: 0.9em; /* Smaller font for subcategories */
+    color: #0056b3; /* Different color for subcategory links */
+}
+
+/* Main Content Styles */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+#product-grid div {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#product-grid h3 {
+    margin-top: 0;
+}
+
+#product-grid img {
+    max-width: 100%;  /* Ensures image is not wider than the card */
+    max-height: 200px; /* Sets a maximum height for the image */
+    height: auto;  /* Maintains the aspect ratio */
+    margin-bottom: 10px; /* Optional: Adds some space below the image */
+}
+
+/* Shopping Cart Styles */
+#shopping-cart {
+    margin-top: 20px;
+}
+
+#cart-items .cart-item {
+    background: #eee;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#cart-items .item-info {
+    margin-bottom: 5px; /* Reduced space between item info and the button */
+}
+
+#cart-items .item-action a {
+    background: none;
+    color: #007bff;
+    padding: 5px 10px; /* Adjusted padding for a more compact button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* #cart-items .item-action button:hover {
+    background-color: #0056b3;
+} */
+
+#clear-cart-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 0px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    transition: none; /* Disable transition */
+}
+
+/* Buttons */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Checkout Page Styles */
+#checkout {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#checkout h2 {
+    text-align: center;
+    color: #333;
+}
+
+#checkout-items {
+    margin-bottom: 20px;
+}
+
+#checkout-items div {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#checkout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkout-form input, #checkout-form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#checkout-form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#checkout-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Total Price Styles for Checkout */
+#checkout-items .total-price {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333; /* You can choose a different color if you like */
+    padding: 10px;
+    border-top: 1px solid #ddd; /* Adds a line above the total price for emphasis */
+}
+.product-management{
+    padding-bottom: 20px;
+    display: flex;
+}
+.back-to-shop {
+    display: block;
+    margin: 20px auto;
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 5px;
+    transition: none; /* Disable transition */
+}
+
+.back-to-shop:hover {
+    color: #007bff; /* Maintain the same color on hover */
+    text-decoration: underline;
+    background: none;
+}
+
+
+/* Admin */
+#admin-login-btn {
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#admin-login-form {
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#admin-login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#admin-login-form label {
+    margin-top: 10px;
+}
+
+#admin-login-form input {
+    margin-top: 5px;
+}
+
+#admin-login-form button {
+    margin-top: 10px;
+}
