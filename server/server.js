@@ -268,8 +268,7 @@ app.post('/upload', (req, res) => {
   }
 
   const image = req.files.image;
-  const uploadPath = path.join('C:/Users/DarkGolly/Downloads/online-shop-master/online-shop-master/db/images', image.name);
-
+  const uploadPath = path.join(__dirname,'../db/images/', image.name);
   image.mv(uploadPath, function(err) {
     if (err) {
       return res.status(500).send(err);

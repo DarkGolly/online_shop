@@ -98,4 +98,5 @@ function deletDetected(event){
   localStorage.setItem('cart', JSON.stringify(newCat));
   // Удаляем элемент товара из DOM
   event.srcElement.parentElement.parentElement.remove();
+  window.location.reload();
 }
